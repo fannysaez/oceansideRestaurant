@@ -1,0 +1,333 @@
+/* =========================================================
+   STYLE.CSS — Styles custom du projet Oceanside
+   MÉTHODE MOBILE FIRST :
+   1. On écrit d'abord les styles SANS media query (= mobile).
+   2. On les enrichit ensuite avec des @media (min-width: ...)
+      pour les écrans plus grands.
+   On ne modifie jamais bootstrap.min.css : on surcharge par-dessus.
+   ========================================================= */
+
+body {
+  font-family: var(--font-body);
+}
+
+h1, h2, h3, .font-display {
+  font-family: var(--font-display);
+}
+
+/* Figma mobile : node "Mobile hero title" (1:242), 54px/56px, boîte de
+   206px de large volontairement étroite pour empiler "Salt," / "stone," / "fire." */
+.section-hero .display-title {
+  font-size: 3.375rem;
+  line-height: 1.037;
+  max-width: 210px;
+}
+
+.eyebrow {
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+/* ---------- Boutons custom (par-dessus .btn de Bootstrap) ---------- */
+.btn-sable {
+  background-color: var(--color-sable);
+  color: var(--color-abysse);
+  border-radius: 50rem; /* pilule, comme sur le mockup */
+  padding: 0.75rem 1.5rem;
+}
+.btn-sable:hover { background-color: var(--color-mineral); color: var(--color-ivoire); }
+
+.btn-ivoire {
+  background-color: var(--color-ivoire);
+  color: var(--color-abysse);
+  border-radius: 50rem;
+  padding: 0.75rem 1.5rem;
+}
+.btn-ivoire:hover { background-color: var(--color-blanc); }
+
+/* ---------- Sections ---------- */
+.section-hero {
+  background-color: var(--color-abysse);
+  color: var(--color-ivoire);
+  overflow: hidden;
+}
+/* Contexte d'empilement propre pour que le z-index négatif du visuel décoratif
+   (mobile) reste bien "derrière le texte" sans s'échapper vers la racine. */
+.section-hero .container {
+  position: relative;
+  z-index: 0;
+}
+
+.section-about {
+  background-color: var(--color-ivoire);
+  color: var(--color-algue);
+}
+
+.section-menu {
+  background-color: var(--color-ivoire);
+}
+
+.section-cta {
+  position: relative;
+  z-index: 0; /* crée un contexte d'empilement propre : sans ça, le z-index:-1
+                 de ::before "s'échappe" vers la racine du document et se fait
+                 recouvrir par le fond de .section-cta lui-même (peint plus tard) */
+  overflow: hidden;
+  background-color: var(--color-algue);
+  color: var(--color-brume);
+}
+/* Figma : bande "seafoam tide" en haut de la section, visible seulement en desktop.
+   z-index: -1 obligatoire : sans lui, la bande (positionnée en absolute) passe
+   au-dessus du <h2> (statique) et cache le texte au lieu de rester en arrière-plan. */
+.section-cta::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background: var(--color-ecume);
+}
+.section-cta h2 {
+  color: var(--color-ivoire);
+}
+
+.section-reserve {
+  background-color: var(--color-algue);
+  color: var(--color-ivoire);
+}
+
+.section-footer {
+  background-color: var(--color-abysse);
+  color: var(--color-ivoire);
+}
+
+/* ---------- Colonne du visuel décoratif ----------
+   Mobile (Figma node "01 Hero Section" mobile, 1:236) : les formes sont
+   superposées derrière le texte, dans l'espace libre à droite de la
+   colonne, PAS empilées après les boutons. On sort donc la colonne du
+   flux normal en mobile ; à partir de md, elle redevient une colonne
+   Bootstrap classique (grille 7/5 déjà fidèle à la maquette desktop). */
+.hero-visual-col {
+  position: absolute;
+  z-index: -1;
+  top: 55px;
+  right: -24px;
+  width: 230px;
+}
+
+/* ---------- Visuel décoratif du Hero (formes géométriques) ----------
+   Figma desktop (node "01 Hero Section", 1:151) :
+   - pilule sable "Mineral wave / gold reef" ~957x190, rotate 15deg
+   - pilule seafoam "Mineral wave / seafoam shelf" ~783x140, rotate 19deg
+   - cercle "Signature plate visual" 430x430
+   Tailles en % du conteneur .hero-visual pour rester proportionnelles
+   quelle que soit la largeur réelle de la colonne Bootstrap. */
+.hero-visual {
+  position: relative;
+  height: 220px;
+  overflow: visible;
+}
+.shape-bar {
+  position: absolute;
+  width: 130%;
+  height: 20%;
+  border-radius: 50rem;
+  background: var(--color-sable);
+  transform: rotate(15deg);
+  top: 12%;
+  right: -20%;
+}
+.shape-bar.secondary {
+  width: 112%;
+  height: 15%;
+  background: var(--color-ecume);
+  transform: rotate(19deg);
+  top: 40%;
+  right: -10%;
+}
+.shape-circle {
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  /* Dégradé exact du fichier Figma (Linéaire, 0%=ivory / 38%=seafoam / 100%=abysse) */
+  background: linear-gradient(135deg, var(--color-ivoire) 0%, var(--color-ecume) 38%, var(--color-abysse) 100%);
+  bottom: 0;
+  right: 8%; /* reste contenu dans le hero, ne déborde pas du cadre comme sur la maquette */
+}
+
+/* ---------- Cartes menu ---------- */
+.menu-card {
+  background-color: var(--color-algue);
+  color: var(--color-ivoire);
+  border: 1px solid var(--color-ecume);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.menu-card .menu-card-img {
+  background: linear-gradient(135deg, var(--color-algue), var(--color-mineral), var(--color-ivoire));
+  height: 140px;
+}
+.menu-card .menu-card-title {
+  font-size: 1.75rem; /* Figma : 28px / line-height 30px, node "Dish" */
+  line-height: 1.07;
+}
+.menu-card .menu-card-desc {
+  color: var(--color-ecume);
+}
+.menu-card .price {
+  color: var(--color-sable);
+  font-weight: 600;
+}
+.menu-intro {
+  color: var(--color-algue);
+}
+
+/* ---------- Stats (section About) ---------- */
+.stat-box {
+  background-color: var(--color-algue);
+  color: var(--color-ivoire);
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+.stat-box .stat-number {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+}
+
+/* ---------- Formulaire de réservation ---------- */
+.reserve-card {
+  background-color: var(--color-ivoire);
+  color: var(--color-abysse);
+  border-radius: 1rem;
+}
+.reserve-card-title {
+  font-size: 2rem;
+  line-height: 1.1;
+}
+.reserve-card .form-control {
+  border-color: var(--color-mineral);
+}
+
+/* ---------- Titres responsives (tailles vérifiées via l'API Figma) ---------- */
+/* Mobile d'abord : node "Mobile about heading" (1:251), 40px/43px */
+.heading-about {
+  color: var(--color-abysse);
+  font-size: 2.5rem;
+  line-height: 1.075;
+}
+/* Mobile : node "Mobile menu heading" (1:258), 46px/48px */
+.heading-menu {
+  font-size: 2.875rem;
+  line-height: 1.043;
+}
+/* Mobile : node "Mobile reserve heading" (1:269), 44px/48px */
+.heading-reserve {
+  font-size: 2.75rem;
+  line-height: 1.09;
+}
+
+/* ---------- Visuel décoratif de la section About ----------
+   Figma mobile (node "Mobile about visual", 1:253, box 342x234) et
+   desktop (node "About visual / mineral shoreline", 1:186, box 520x356) :
+   coordonnées reprises telles quelles (le ratio des deux frames Figma
+   est identique, 342/234 ≈ 520/356, donc pas de distorsion). */
+.about-visual {
+  position: relative;
+  height: 234px;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--color-abysse), var(--color-algue), var(--color-mineral));
+}
+.about-shape-bar {
+  position: absolute;
+  top: 30px;
+  left: 33px;
+  width: 310px;
+  height: 43px;
+  border-radius: 50rem;
+  background: var(--color-sable);
+  transform: rotate(12deg);
+}
+.about-shape-circle {
+  position: absolute;
+  top: 57px;
+  left: 151px;
+  width: 157px;
+  height: 157px;
+  border-radius: 50%;
+  background: var(--color-ecume);
+}
+.about-shape-dot {
+  position: absolute;
+  top: 106px;
+  left: 65px;
+  width: 106px;
+  height: 106px;
+  border-radius: 50%;
+  background: var(--color-abysse);
+}
+
+/* =========================================================
+   MOBILE FIRST : à partir d'ici, on ENRICHIT pour les
+   écrans plus grands. Toujours min-width, jamais max-width.
+   Breakpoints Bootstrap : md = 768px / lg = 992px
+   ========================================================= */
+
+@media (min-width: 768px) {
+  .section-hero .display-title { max-width: none; }
+  /* On redonne à la colonne son comportement de grille Bootstrap normal (fidèle
+     à la maquette desktop, colonnes 7/5 côte à côte). */
+  .hero-visual-col {
+    position: static;
+    z-index: auto;
+    top: auto;
+    right: auto;
+    /* Ses enfants sont tous en absolute donc n'ont pas de largeur "naturelle" :
+       il faut redonner explicitement la largeur de grille Bootstrap (.col-md-5),
+       "width: auto" ferait s'effondrer la colonne à ~0px (shrink-to-fit). */
+    width: 41.6667%;
+  }
+  .hero-visual { height: 420px; }
+  .shape-circle { width: 260px; height: 260px; }
+
+  .menu-card .menu-card-img { height: 180px; }
+
+  .about-visual { height: 356px; }
+  .about-shape-bar { top: 42px; left: 60px; width: 478px; height: 159px; }
+  .about-shape-circle { top: 86px; left: 220px; width: 230px; height: 230px; }
+  .about-shape-dot { top: 150px; left: 60px; width: 180px; height: 180px; }
+
+  /* Figma desktop : "About heading" (1:174) 58px/62px */
+  .heading-about { font-size: 3.625rem; line-height: 1.07; }
+  /* Figma desktop : "Section heading" menu (1:191) 60px/64px */
+  .heading-menu { font-size: 3.75rem; line-height: 1.067; }
+  /* Figma desktop : "Reservation heading" (1:199) 62px/66px */
+  .heading-reserve { font-size: 3.875rem; line-height: 1.065; }
+  /* Figma desktop : modal "Reserve Your Table" (I1:202;5:48) 40px/42px */
+  .reserve-card-title { font-size: 2.5rem; line-height: 1.05; }
+
+  /* Bande seafoam visible seulement en desktop (node "Seafoam tide band", 1:198) */
+  .section-cta::before { height: 180px; }
+}
+
+@media (min-width: 992px) {
+  /* Figma : 84px / line-height 86px sur le node "Hero title" (1:162) */
+  .section-hero .display-title { font-size: 5.25rem; line-height: 1.02; }
+  .shape-circle { width: 320px; height: 320px; right: 8%; }
+}
+
+/* Couleur exacte du texte de nav et du corps du hero (color/mist, #D7EFE3) */
+.navbar-nav .nav-link,
+.section-hero p:not(.eyebrow) {
+  color: var(--color-brume);
+}
+
+/* Bootstrap fixe sa propre couleur sur .navbar-dark .navbar-brand (même spécificité
+   que ce sélecteur) : on la remplace par l'ivoire exact du fichier Figma (#EEE8B2). */
+.navbar-dark .navbar-brand {
+  color: var(--color-ivoire);
+}

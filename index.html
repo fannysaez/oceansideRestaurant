@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <!-- Balise indispensable pour le mobile first : sans elle, le mobile
+       affiche une version "zoomée" d'une page desktop -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Oceanside Restaurant</title>
+
+  <!-- Polices du fichier Figma : Cormorant Garamond (titres, Bold) + Inter (texte) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap (CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Nos fichiers custom, TOUJOURS après Bootstrap pour pouvoir le surcharger -->
+  <link href="styles/globals.css" rel="stylesheet">
+  <link href="styles/utilities.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ============ HEADER / NAVIGATION ============ -->
+  <header class="section-hero">
+    <nav class="navbar navbar-expand-md navbar-dark container py-3">
+      <a class="navbar-brand d-flex align-items-center gap-2 font-display" href="#">
+        <img src="assets/img/svg/Logo.svg" width="38" height="38" alt="Oceanside Restaurant">
+        Oceanside <span class="d-none d-md-inline">Restaurant</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+        <ul class="navbar-nav gap-md-4">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="#reserve">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="#reserve">Reserve</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- ============ HERO SECTION ============ -->
+    <div class="container py-5">
+      <div class="row align-items-center">
+        <div class="col-12 col-md-7">
+          <p class="eyebrow mb-3" style="color:var(--color-ecume)">
+            <span class="d-none d-md-inline">Coastal dining / Oyster bar / Evening tides</span>
+            <span class="d-md-none">Coastal dining</span>
+          </p>
+
+          <h1 class="font-display display-title mb-4">
+            <span class="d-none d-md-inline">A restaurant shaped by salt, stone, and fire.</span>
+            <span class="d-md-none">Salt, stone,<br>fire.</span>
+          </h1>
+
+          <p class="mb-4" style="max-width: 480px;">
+            <span class="d-none d-md-inline">
+              Oceanside Restaurant serves refined coastal plates, mineral-bright cocktails,
+              and slow evenings beside the water.
+            </span>
+            <span class="d-md-none">Refined plates and mineral-bright cocktails beside the water.</span>
+          </p>
+
+          <div class="d-flex gap-3 flex-wrap">
+            <a href="#menu" class="btn btn-sable">SEE MENU →</a>
+            <a href="#reserve" class="btn btn-ivoire">PLACE ORDER →</a>
+          </div>
+        </div>
+
+        <!-- Visuel décoratif : formes CSS, pas d'image.
+             Sur mobile, comme sur la maquette, il se superpose derrière le texte
+             (dans l'espace libre à droite) au lieu d'être empilé sous les boutons. -->
+        <div class="col-12 col-md-5 hero-visual-col">
+          <div class="hero-visual">
+            <div class="shape-bar"></div>
+            <div class="shape-bar secondary"></div>
+            <div class="shape-circle"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ ABOUT SECTION ============ -->
+  <section class="section-about py-5" id="about">
+    <div class="container py-4">
+      <div class="row align-items-center g-5">
+        <div class="col-12 col-md-6">
+          <p class="eyebrow mb-3" style="color:var(--color-mineral)">About Oceanside</p>
+          <h2 class="font-display heading-about mb-3">A coastal room with a mineral heart.</h2>
+          <p class="mb-4">
+            <span class="d-none d-md-inline">
+              Inspired by sea-polished stone, tide pools, and firelit service, Oceanside pairs
+              refined seafood with a dining room made for lingering. The palette, components,
+              and spacing are built as reusable template foundations.
+            </span>
+            <span class="d-md-none">
+              Sea-polished stone, tide pools, and firelit service shape the dining room, menu,
+              and reusable template system.
+            </span>
+          </p>
+
+          <!-- Stats visibles seulement à partir du desktop -->
+          <div class="row g-3 d-none d-md-flex">
+            <div class="col-4">
+              <div class="stat-box">
+                <div class="stat-number">08</div>
+                <small>signature plates</small>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="stat-box">
+                <div class="stat-number">42</div>
+                <small>seat dining room</small>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="stat-box">
+                <div class="stat-number">05</div>
+                <small>coastal cocktails</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6">
+          <div class="rounded-4 about-visual">
+            <div class="about-shape-bar"></div>
+            <div class="about-shape-circle"></div>
+            <div class="about-shape-dot"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MENU SECTION ============ -->
+  <section class="section-menu py-5" id="menu">
+    <div class="container py-4 text-center">
+      <h2 class="font-display heading-menu mb-2">The Tide Menu</h2>
+      <p class="d-none d-md-block menu-intro mb-5">Seasonal seafood, herb-lit vegetables, and warm coastal classics.</p>
+
+      <div class="row g-4 mt-2 text-start">
+        <div class="col-12 col-md-4">
+          <div class="menu-card h-100">
+            <div class="menu-card-img d-none d-md-block"></div>
+            <div class="p-3">
+              <h3 class="font-display menu-card-title">Tide Pearl Crudo</h3>
+              <p class="small menu-card-desc d-none d-md-block mb-2">citrus kelp oil, preserved lemon, smoked sea salt</p>
+              <span class="price">$28</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="menu-card h-100">
+            <div class="menu-card-img d-none d-md-block"></div>
+            <div class="p-3">
+              <h3 class="font-display menu-card-title">Charred Octopus</h3>
+              <p class="small menu-card-desc d-none d-md-block mb-2">mineral greens, saffron aioli, warm lentils</p>
+              <span class="price">$34</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="menu-card h-100">
+            <div class="menu-card-img d-none d-md-block"></div>
+            <div class="p-3">
+              <h3 class="font-display menu-card-title">Branzino Royale</h3>
+              <p class="small menu-card-desc d-none d-md-block mb-2">brown butter, sea herbs, confit fennel</p>
+              <span class="price">$42</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA + RESERVE SECTION ============ -->
+  <section class="section-cta py-5" id="reserve">
+    <div class="container py-4">
+      <div class="row g-5 align-items-start">
+        <div class="col-12 col-md-6">
+          <h2 class="font-display heading-reserve mb-3">
+            <span class="d-none d-md-inline">Dinner with the horizon in view.</span>
+            <span class="d-md-none">Dinner by the horizon.</span>
+          </h2>
+          <p class="mb-4">
+            <span class="d-none d-md-inline">
+              Book sunset service, private dining, or order a chilled seafood tower for pickup.
+              The template includes modal assets and prototype flow for each CTA.
+            </span>
+            <span class="d-md-none">Reserve sunset service or place an order for pickup.</span>
+          </p>
+          <a href="#" class="btn btn-sable">
+            <span class="d-none d-md-inline">SEE MENU →</span>
+            <span class="d-md-none">PLACE ORDER →</span>
+          </a>
+        </div>
+
+        <!-- Formulaire visible seulement en desktop, comme sur le mockup -->
+        <div class="col-12 col-md-6 d-none d-md-block">
+          <div class="reserve-card p-4 shadow-sm">
+            <h3 class="font-display reserve-card-title mb-2">Reserve Your Table</h3>
+            <p class="small mb-3">A quiet table by the glass, oysters on ice, and the tide doing the rest.</p>
+            <form>
+              <input type="text" class="form-control mb-2" placeholder="Name">
+              <input type="text" class="form-control mb-2" placeholder="Date">
+              <input type="text" class="form-control mb-3" placeholder="Guests">
+              <button type="submit" class="btn btn-sable w-100">Reserve</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="section-footer py-4">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
+      <h2 class="font-display h5 mb-0">Oceanside Restaurant</h2>
+      <p class="small mb-0 text-center">Harborfront dining / open Tuesday-Sunday / 5 PM-late</p>
+      <ul class="nav d-md-none">
+        <li class="nav-item"><a class="nav-link text-light px-2" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link text-light px-2" href="#menu">Menu</a></li>
+        <li class="nav-item"><a class="nav-link text-light px-2" href="#reserve">Contact</a></li>
+        <li class="nav-item"><a class="nav-link text-light px-2" href="#reserve">Reserve</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS (nécessaire pour le menu mobile / navbar-toggler) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
