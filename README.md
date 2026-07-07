@@ -9,10 +9,6 @@ Reproduction pixel-close, **mobile first**, d'une maquette Figma « Oceanside Re
 ![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3.3-7952B3?style=flat&logo=bootstrap&logoColor=white)
 ![Mobile First](https://img.shields.io/badge/Approche-Mobile%20First-96CDB0?style=flat)
 
-<p align="center">
-  <a href="assets/oceanside-restaurant/01-presentation.md"><img src="https://img.shields.io/badge/-COMMENCER-C18D52?style=for-the-badge" alt="Commencer"></a>
-</p>
-
 ---
 
 ## 📑 Table des matières
@@ -31,6 +27,35 @@ Toute la documentation détaillée du projet est découpée en pages, dans [`ass
 
 ---
 
-## 👩‍💻 Auteur
+## 🗂️ Structure du projet
 
-**Fanny Saez** — Formation CDA (Concepteur Développeur d'Applications), Simplon.
+```text
+reproduire-site-boostrap/
+├── assets/
+│   ├── img/
+│   │   └── svg/
+│   │       └── Logo.svg              # Logo du site (favicon / navbar)
+│   ├── maquette/                     # Exports de la maquette Figma (référence visuelle)
+│   │   ├── 01 Desktop Layers.png
+│   │   ├── 02 Mobile Layers.png
+│   │   └── variables css réutilisables.png
+│   └── oceanside-restaurant/         # Documentation paginée du projet
+│       ├── 01-presentation.md
+│       ├── 02-maquette-figma.md
+│       ├── 03-structure-projet.md
+│       ├── 04-design-system.md
+│       ├── 05-technologies.md
+│       ├── 06-lancer-en-local.md
+│       └── 07-responsive-mobile-first.md
+├── styles/
+│   ├── globals.css                   # Design tokens : couleurs, typographies, surcharge des variables Bootstrap (--bs-*)
+│   └── utilities.css                 # Styles custom du projet, mobile first, par-dessus Bootstrap
+├── index.html                        # Page unique (Hero, About, Menu, Reserve, Footer)
+└── README.md
+```
+
+---
+
+<p align="center">
+  <a href="assets/oceanside-restaurant/01-presentation.md"><img src="https://img.shields.io/badge/-COMMENCER-C18D52?style=for-the-badge" alt="Commencer"></a>
+</p>
