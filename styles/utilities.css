@@ -237,6 +237,14 @@ h1, h2, h3, .font-display {
   overflow: hidden;
   background: linear-gradient(135deg, var(--color-abysse), var(--color-algue), var(--color-mineral));
 }
+
+.about-visual-1{
+  position: relative;
+  height: 150px;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--color-abysse), var(--color-algue), var(--color-mineral));
+
+}
 .about-shape-bar {
   position: absolute;
   top: 30px;
