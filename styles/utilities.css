@@ -173,7 +173,7 @@ h1, h2, h3, .font-display {
   height: 140px;
 }
 .menu-card-1 .menu-card-img-1 {
-  background: linear-gradient(135deg, var(--color-sable), var(--color-blanc));
+  background: linear-gradient(135deg, var(--color-ecume), var(--color-brume));
   height: 140px;
 }
 
