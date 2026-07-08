@@ -25,12 +25,13 @@
      Bootstrap 5.3+ lit ses couleurs via --bs-*.
      En les redéfinissant ici, tous les composants Bootstrap
      (boutons, navbar, etc.) héritent automatiquement de la charte. */
-  --bs-primary: var(--color-sable);
-  --bs-primary-rgb: 193, 141, 82;
-  --bs-secondary: var(--color-mineral);
-  --bs-dark: var(--color-abysse);
-  --bs-light: var(--color-ivoire);
-  --bs-body-font-family: var(--font-body);
-  --bs-body-color: var(--color-abysse);
-  --bs-body-bg: var(--color-ivoire);
+     
+   --bs-primary: var(--color-sable);        /* couleur principale Bootstrap */
+   --bs-primary-rgb: 193, 141, 82;          /* équivalent RGB de --color-sable */
+   --bs-secondary: var(--color-mineral);    /* couleur secondaire Bootstrap */
+   --bs-dark: var(--color-abysse);          /* texte/fonds sombres */
+   --bs-light: var(--color-ivoire);         /* couleur claire Bootstrap */
+   --bs-body-font-family: var(--font-body); /* police du texte global */
+   --bs-body-color: var(--color-abysse);    /* couleur du texte principal */
+   --bs-body-bg: var(--color-ivoire);       /* fond global de la page */
 }

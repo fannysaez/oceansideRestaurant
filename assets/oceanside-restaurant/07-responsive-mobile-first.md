@@ -13,5 +13,5 @@ Le titre du Hero passe de 54px (mobile, node Figma `"Mobile hero title"`) à 84p
 ---
 
 <p align="center">
-  <a href="06-lancer-en-local.md"><img src="https://img.shields.io/badge/-PR%C3%89C%C3%89DENT-5A8F76?style=for-the-badge" alt="Précédent"></a> &nbsp;&nbsp; <a href="../../README.md"><img src="https://img.shields.io/badge/-RETOUR%20AU%20SOMMAIRE-C18D52?style=for-the-badge" alt="Retour au sommaire"></a>
+  <a href="06-lancer-en-local.md"><img src="https://img.shields.io/badge/-PR%C3%89C%C3%89DENT-5A8F76?style=for-the-badge" alt="Précédent"></a> &nbsp;&nbsp; <a href="08-explication-orale.md"><img src="https://img.shields.io/badge/-SUIVANT-5A8F76?style=for-the-badge" alt="Suivant"></a>
 </p>

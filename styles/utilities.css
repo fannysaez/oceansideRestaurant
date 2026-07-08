@@ -213,8 +213,7 @@ h1, h2, h3, .font-display {
   border-color: var(--color-mineral);
 }
 
-/* ---------- Titres responsives (tailles vérifiées via l'API Figma) ---------- */
-/* Mobile d'abord : node "Mobile about heading" (1:251), 40px/43px */
+/* ---------- Titres responsives ---------- */
 .heading-about {
   color: var(--color-abysse);
   font-size: 2.5rem;
@@ -231,11 +230,7 @@ h1, h2, h3, .font-display {
   line-height: 1.09;
 }
 
-/* ---------- Visuel décoratif de la section About ----------
-   Figma mobile (node "Mobile about visual", 1:253, box 342x234) et
-   desktop (node "About visual / mineral shoreline", 1:186, box 520x356) :
-   coordonnées reprises telles quelles (le ratio des deux frames Figma
-   est identique, 342/234 ≈ 520/356, donc pas de distorsion). */
+/* ---------- Visuel décoratif de la section About ---------- */
 .about-visual {
   position: relative;
   height: 234px;
@@ -274,7 +269,6 @@ h1, h2, h3, .font-display {
 /* =========================================================
    MOBILE FIRST : à partir d'ici, on ENRICHIT pour les
    écrans plus grands. Toujours min-width, jamais max-width.
-   Breakpoints Bootstrap : md = 768px / lg = 992px
    ========================================================= */
 
 @media (min-width: 768px) {

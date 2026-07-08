@@ -24,6 +24,7 @@ Toute la documentation détaillée du projet est découpée en pages, dans [`ass
 | 05 | [Technologies utilisées](assets/oceanside-restaurant/05-technologies.md) | HTML5, CSS3, Bootstrap 5.3.3, Google Fonts |
 | 06 | [Lancer le projet en local](assets/oceanside-restaurant/06-lancer-en-local.md) | Clone, ouverture, serveur local |
 | 07 | [Approche responsive / mobile first](assets/oceanside-restaurant/07-responsive-mobile-first.md) | Méthode mobile first, exemple concret |
+| 08 | [Fiche de révision : expliquer le mobile first à l'oral](assets/oceanside-restaurant/08-explication-orale.md) | Pitch, exemples concrets, tableau récap Bootstrap |
 
 ---
 
@@ -46,7 +47,8 @@ reproduire-site-boostrap/
 │       ├── 04-design-system.md
 │       ├── 05-technologies.md
 │       ├── 06-lancer-en-local.md
-│       └── 07-responsive-mobile-first.md
+│       ├── 07-responsive-mobile-first.md
+│       └── 08-explication-orale.md
 ├── styles/
 │   ├── globals.css                   # Design tokens : couleurs, typographies, surcharge des variables Bootstrap (--bs-*)
 │   └── utilities.css                 # Styles custom du projet, mobile first, par-dessus Bootstrap
