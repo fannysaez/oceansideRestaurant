@@ -9,6 +9,8 @@ Reproduction pixel-close, **mobile first**, d'une maquette Figma « Oceanside Re
 ![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3.3-7952B3?style=flat&logo=bootstrap&logoColor=white)
 ![Mobile First](https://img.shields.io/badge/Approche-Mobile%20First-96CDB0?style=flat)
 
+🔗 **Démo en ligne :** [oceanside-restaurant.vercel.app](https://oceanside-restaurant.vercel.app/)
+
 ---
 
 ## 📑 Table des matières
@@ -24,7 +26,20 @@ Toute la documentation détaillée du projet est découpée en pages, dans [`ass
 | 05 | [Technologies utilisées](assets/oceanside-restaurant/05-technologies.md) | HTML5, CSS3, Bootstrap 5.3.3, Google Fonts |
 | 06 | [Lancer le projet en local](assets/oceanside-restaurant/06-lancer-en-local.md) | Clone, ouverture, serveur local |
 | 07 | [Approche responsive / mobile first](assets/oceanside-restaurant/07-responsive-mobile-first.md) | Méthode mobile first, exemple concret |
-| 08 | [Fiche de révision : expliquer le mobile first à l'oral](assets/oceanside-restaurant/08-explication-orale.md) | Pitch, exemples concrets, tableau récap Bootstrap |
+
+---
+
+## 🖼️ Maquette (desktop, mobile & variables CSS)
+
+Exports de la maquette Figma utilisés comme référence visuelle pour la reproduction pixel-close, disponibles dans [`assets/maquette/`](assets/maquette).
+
+| Desktop | Mobile |
+| --- | --- |
+| ![Maquette Desktop](assets/maquette/01%20Desktop%20Layers.webp) | ![Maquette Mobile](assets/maquette/02%20Mobile%20Layers.webp) |
+
+**Variables CSS réutilisables** — palette de couleurs, typographies et espacements extraits de la maquette, repris dans [`styles/globals.css`](styles/globals.css) :
+
+![Variables CSS réutilisables](assets/maquette/variables%20css%20r%C3%A9utilisables.webp)
 
 ---
 
@@ -37,9 +52,9 @@ reproduire-site-boostrap/
 │   │   └── svg/
 │   │       └── Logo.svg              # Logo du site (favicon / navbar)
 │   ├── maquette/                     # Exports de la maquette Figma (référence visuelle)
-│   │   ├── 01 Desktop Layers.png
-│   │   ├── 02 Mobile Layers.png
-│   │   └── variables css réutilisables.png
+│   │   ├── 01 Desktop Layers.webp
+│   │   ├── 02 Mobile Layers.webp
+│   │   └── variables css réutilisables.webp
 │   └── oceanside-restaurant/         # Documentation paginée du projet
 │       ├── 01-presentation.md
 │       ├── 02-maquette-figma.md
@@ -47,8 +62,7 @@ reproduire-site-boostrap/
 │       ├── 04-design-system.md
 │       ├── 05-technologies.md
 │       ├── 06-lancer-en-local.md
-│       ├── 07-responsive-mobile-first.md
-│       └── 08-explication-orale.md
+│       └── 07-responsive-mobile-first.md
 ├── styles/
 │   ├── globals.css                   # Design tokens : couleurs, typographies, surcharge des variables Bootstrap (--bs-*)
 │   └── utilities.css                 # Styles custom du projet, mobile first, par-dessus Bootstrap
