@@ -4,9 +4,19 @@ Les captures de la maquette originale sont disponibles dans [`assets/maquette/`]
 
 | Fichier | Contenu |
 | --- | --- |
-| [`01 Desktop Layers.png`](../maquette/01%20Desktop%20Layers.png) | Maquette desktop complète (calques Figma) |
-| [`02 Mobile Layers.png`](../maquette/02%20Mobile%20Layers.png) | Maquette mobile complète (calques Figma) |
-| [`variables css réutilisables.png`](../maquette/variables%20css%20réutilisables.png) | Page Figma listant les tokens couleur/typo réutilisables du design system |
+| [`01 Desktop Layers.webp`](../maquette/01%20Desktop%20Layers.webp) | Maquette desktop complète (calques Figma) |
+| [`02 Mobile Layers.webp`](../maquette/02%20Mobile%20Layers.webp) | Maquette mobile complète (calques Figma) |
+| [`variables css réutilisables.webp`](../maquette/variables%20css%20r%C3%A9utilisables.webp) | Page Figma listant les tokens couleur/typo réutilisables du design system |
+
+---
+
+## Vue d'ensemble du fichier Figma
+
+Aperçu global du fichier Figma, disponible dans [`assets/figma/`](../figma) :
+
+<p align="center">
+  <img src="../figma/Aper%C3%A7u%20Maquette%20Figma.webp" alt="Aperçu Maquette Figma" width="600">
+</p>
 
 ---
 

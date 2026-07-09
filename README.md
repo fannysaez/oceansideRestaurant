@@ -49,6 +49,19 @@ Palette de couleurs, typographies et espacements extraits de la maquette, repris
 
 ---
 
+## 📱 Responsive (desktop & mobile)
+
+Captures du site déployé, disponibles dans [`assets/responsive/`](assets/responsive), vérifiant le rendu final sur Macbook Air (desktop) et iPhone 14 Pro (mobile).
+
+<div align="center">
+  <img src="assets/responsive/Macbook-Air-oceanside-restaurant.vercel.app.webp" alt="Rendu responsive desktop - Macbook Air" width="380" align="top">
+  <img src="assets/responsive/iPhone-14-PRO-oceanside-restaurant.vercel.app.webp" alt="Rendu responsive mobile - iPhone 14 Pro" width="150" align="top">
+  <br>
+  <sub><b>Desktop (Macbook Air)</b> · <b>Mobile (iPhone 14 Pro)</b></sub>
+</div>
+
+---
+
 ## 🗂️ Structure du projet
 
 ```text
@@ -57,10 +70,15 @@ reproduire-site-boostrap/
 │   ├── img/
 │   │   └── svg/
 │   │       └── Logo.svg              # Logo du site (favicon / navbar)
+│   ├── figma/                        # Aperçu global du fichier Figma
+│   │   └── Aperçu Maquette Figma.webp
 │   ├── maquette/                     # Exports de la maquette Figma (référence visuelle)
 │   │   ├── 01 Desktop Layers.webp
 │   │   ├── 02 Mobile Layers.webp
 │   │   └── variables css réutilisables.webp
+│   ├── responsive/                   # Captures du site déployé (desktop/mobile)
+│   │   ├── Macbook-Air-oceanside-restaurant.vercel.app.webp
+│   │   └── iPhone-14-PRO-oceanside-restaurant.vercel.app.webp
 │   └── oceanside-restaurant/         # Documentation paginée du projet
 │       ├── 01-presentation.md
 │       ├── 02-maquette-figma.md
