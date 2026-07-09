@@ -97,5 +97,5 @@ reproduire-site-boostrap/
 ---
 
 <p align="center">
-  <a href="assets/oceanside-restaurant/01-presentation.md"><img src="https://img.shields.io/badge/-COMMENCER-C18D52?style=for-the-badge" alt="Commencer"></a>
+  <a href="assets/oceanside-restaurant/01-presentation.md"><img src="https://img.shields.io/badge/-SUIVANT-C18D52?style=for-the-badge" alt="SUIVANT"></a>
 </p>
