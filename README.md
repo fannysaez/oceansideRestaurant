@@ -37,9 +37,13 @@ Toute la documentation détaillée du projet est découpée en pages, dans [`ass
 
 Exports de la maquette Figma utilisés comme référence visuelle pour la reproduction pixel-close, disponibles dans [`assets/maquette/`](assets/maquette).
 
-| Desktop | Mobile | Variables CSS réutilisables |
-| :---: | :---: | :---: |
-| <img src="assets/maquette/01%20Desktop%20Layers.webp" alt="Maquette Desktop" width="280"> | <img src="assets/maquette/02%20Mobile%20Layers.webp" alt="Maquette Mobile" width="130"> | <img src="assets/maquette/variables%20css%20r%C3%A9utilisables.webp" alt="Variables CSS réutilisables" width="200"> |
+<div align="center">
+  <img src="assets/maquette/01%20Desktop%20Layers.webp" alt="Maquette Desktop" width="280" align="top">
+  <img src="assets/maquette/02%20Mobile%20Layers.webp" alt="Maquette Mobile" width="130" align="top">
+  <img src="assets/maquette/variables%20css%20r%C3%A9utilisables.webp" alt="Variables CSS réutilisables" width="200" align="top">
+  <br>
+  <sub><b>Desktop</b> · <b>Mobile</b> · <b>Variables CSS réutilisables</b></sub>
+</div>
 
 Palette de couleurs, typographies et espacements extraits de la maquette, repris dans [`styles/globals.css`](styles/globals.css).
 
