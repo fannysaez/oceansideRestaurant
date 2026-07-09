@@ -1,3 +1,5 @@
+<div align="center">
+
 # 🌊 Oceanside Restaurant — Reproduction Bootstrap d'une maquette Figma
 
 **HTML5 · CSS3 · Bootstrap 5** — Projet réalisé dans le cadre de la formation **CDA (Simplon)**, 2026.
@@ -10,6 +12,8 @@ Reproduction pixel-close, **mobile first**, d'une maquette Figma « Oceanside Re
 ![Mobile First](https://img.shields.io/badge/Approche-Mobile%20First-96CDB0?style=flat)
 
 🔗 **Démo en ligne :** [oceanside-restaurant.vercel.app](https://oceanside-restaurant.vercel.app/)
+
+</div>
 
 ---
 
@@ -35,11 +39,11 @@ Exports de la maquette Figma utilisés comme référence visuelle pour la reprod
 
 | Desktop | Mobile |
 | --- | --- |
-| ![Maquette Desktop](assets/maquette/01%20Desktop%20Layers.webp) | ![Maquette Mobile](assets/maquette/02%20Mobile%20Layers.webp) |
+| <img src="assets/maquette/01%20Desktop%20Layers.webp" alt="Maquette Desktop" width="380"> | <img src="assets/maquette/02%20Mobile%20Layers.webp" alt="Maquette Mobile" width="200"> |
 
 **Variables CSS réutilisables** — palette de couleurs, typographies et espacements extraits de la maquette, repris dans [`styles/globals.css`](styles/globals.css) :
 
-![Variables CSS réutilisables](assets/maquette/variables%20css%20r%C3%A9utilisables.webp)
+<img src="assets/maquette/variables%20css%20r%C3%A9utilisables.webp" alt="Variables CSS réutilisables" width="500">
 
 ---
 
